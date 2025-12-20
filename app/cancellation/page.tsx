@@ -11,39 +11,16 @@ export default function CancellationPage() {
             Условия отмены
           </p>
           <h1 className="text-4xl font-semibold leading-tight">
-            Прозрачно и спокойно: правила отмены и возвратов
+            Правила отмены и возвратов
           </h1>
-          <p className="text-lg text-white/80 leading-relaxed">
-            Мы заботимся о комфорте участников и стараемся предусмотреть разные
-            ситуации. Ознакомьтесь с условиями, чтобы планировать поездку без
-            стресса.
-          </p>
         </header>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3">
-            <h3 className="text-xl font-semibold">Отмена по инициативе участника</h3>
-            <ul className="list-disc marker:text-white/70 pl-5 space-y-2 text-white/90">
-              <li>За 45+ дней до выезда — возврат за вычетом невозвратных билетов/броней.</li>
-              <li>За 30–45 дней — возврат 50% стоимости пакета.</li>
-              <li>Менее 30 дней — оплата не возвращается, но можно передать место другу.</li>
-            </ul>
-          </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3">
-            <h3 className="text-xl font-semibold">Если тур переносится</h3>
-            <ul className="list-disc marker:text-white/70 pl-5 space-y-2 text-white/90">
-              <li>При форс-мажорах (погода, ограничения) предложим новые даты или полный возврат.</li>
-              <li>Все бронования переносим и сопровождаем по новым датам.</li>
-            </ul>
-          </div>
-        </div>
-
         <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3 max-w-3xl">
-          <h3 className="text-xl font-semibold">Дополнительно</h3>
-          <ul className="list-disc marker:text-white/70 pl-5 space-y-2 text-white/90">
-            <li>Авиабилеты приобретаются отдельно; условия возврата зависят от тарифа авиакомпании.</li>
-            <li>Рекомендуем оформить страховку с покрытием отмены поездки.</li>
-            <li>Поможем с заменой участника в случае переноса места.</li>
+          <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
+            <li>отмена в течении 24 часов с момента оплаты- полный возврат предоплаты</li>
+            <li>отмена более чем за 15 дней до старта тура - возврат предоплаты за вычетом  50% от стоимости тура</li>
+            <li>отмена более чем за 1 день до старта тура - возврат предоплаты за вычетом 90% от стоимости тура</li>
+            <li>отмена менее чем за 1 день до старта тура- предоплата не возвращается</li>
           </ul>
         </div>
 

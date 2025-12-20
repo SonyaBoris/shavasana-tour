@@ -8,68 +8,64 @@ export default function ParticipationPage() {
       <section className="site-container pt-32 pb-16 space-y-8">
         <header className="space-y-3 max-w-4xl">
           <p className="text-sm uppercase tracking-[0.08em] text-white/60">
-            Форматы участия
+            Варианты участия
           </p>
-          <h1 className="text-4xl font-semibold leading-tight">
-            Выбирайте комфортный формат ретрита
-          </h1>
-          <p className="text-lg text-white/80 leading-relaxed">
-            Поможем подобрать вариант проживания и участия под ваши задачи —
-            от уединённого отдыха до более насыщенного взаимодействия с мастерами.
-          </p>
+          <h1 className="text-4xl font-semibold leading-tight">Тарифы</h1>
         </header>
 
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3">
-            <h3 className="text-xl font-semibold">Базовый</h3>
-            <ul className="list-disc marker:text-white/70 pl-5 space-y-2 text-white/90">
-              <li>Проживание в отелях программы</li>
-              <li>Завтраки, трансферы, паромы</li>
-              <li>Участие во всех общих практиках</li>
+            <h3 className="text-xl font-semibold">Оптимальный</h3>
+            <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
+              <li>Размещение в двухместном номере по 2 человека.</li>
+              <li>Все что входит в программу  включено.</li>
+              <li>Покупка билетов и виза оформляются самостоятельно</li>
+              <li>При внесении 50% предоплаты до 10 января</li>
+              <li>Цена: 2875 $ (примерно 230 000 рублей , оплата по курсу цб+3%)</li>
+              <li>При внесении предоплаты до 10 февраля</li>
+              <li>цена тура 3000 $</li>
+              <li>( оплата по курсу цб+3%)</li>
             </ul>
           </div>
+
           <div className="rounded-3xl border border-white/10 bg-white/8 p-6 backdrop-blur shadow-xl space-y-3">
-            <h3 className="text-xl font-semibold">Премиум</h3>
-            <ul className="list-disc marker:text-white/70 pl-5 space-y-2 text-white/90">
-              <li>Повышенная категория номеров</li>
-              <li>Индивидуальные сессии с мастерами</li>
-              <li>Расширенный трансфер и гибкий график</li>
+            <h3 className="text-xl font-semibold">Комфорт</h3>
+            <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
+              <li>Размещение одноместное</li>
+              <li>Все что входит в программу включено.</li>
+              <li>Покупка билетов и виза оформляются самостоятельно</li>
+              <li>Если необходимо, то даем контакт для оформления визы.</li>
+              <li>При внесении 50% оплаты до 10 января</li>
+              <li>4750$ ( примерно 380 000 рублей , оплата по курсу цб+3%)</li>
+              <li>При внесении 50% оплаты до 10 февраля</li>
+              <li>4900 $ ( оплата по курсу цб+3%)</li>
             </ul>
           </div>
+
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3">
-            <h3 className="text-xl font-semibold">Индивидуально</h3>
-            <ul className="list-disc marker:text-white/70 pl-5 space-y-2 text-white/90">
-              <li>Персональная программа под запрос</li>
-              <li>Дополнительные консультации</li>
-              <li>Поддержка куратора 24/7</li>
+            <h3 className="text-xl font-semibold">Вип тариф</h3>
+            <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
+              <li>Вам не придется искать билеты и оформлять визу!</li>
+              <li>Мы все сделаем за вас</li>
+              <li>Одноместное размещение!</li>
+              <li>Покупка билетов</li>
+              <li>Оформление визы</li>
+              <li>5875 $ ( оплата по курсу цб+3%)</li>
             </ul>
           </div>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3 max-w-3xl">
-          <h3 className="text-xl font-semibold">Как выбрать</h3>
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3">
+          <h3 className="text-xl font-semibold">Мега предложение</h3>
           <p className="text-white/90 leading-relaxed">
-            Напишите нам в Telegram — подберём формат и расскажем детали по датам,
-            проживанию и перелётам.
+            При внесении предоплаты
+            20-23 декабря, самая вкусная цена:
           </p>
-          <div className="flex flex-wrap gap-3 text-sm font-semibold uppercase tracking-wide">
-            <a
-              className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-white transition hover:border-white/40 hover:bg-white/20"
-              href="https://t.me/Shavasanaaaa"
-              target="_blank"
-              rel="noreferrer"
-            >
-              @Shavasanaaaa
-            </a>
-            <a
-              className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-white transition hover:border-white/40 hover:bg-white/20"
-              href="https://t.me/marie_serebryakova"
-              target="_blank"
-              rel="noreferrer"
-            >
-              @marie_serebryakova
-            </a>
-          </div>
+          <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
+            <li>Оптимальный- 2600$</li>
+            <li>Комфорт-4400$</li>
+            <li>Вип-5500$</li>
+          </ul>
         </div>
 
         <Link

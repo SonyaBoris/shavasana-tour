@@ -12,9 +12,9 @@ const Main = () => {
                     <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm uppercase tracking-[0.08em]">
                         Андаманские острова
                         <span className="text-white/70">•</span>
-                        Индия
+                        Путешествие в Рай
                     </div>
-                    <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Ретрит на Андаманских островах с Михаилом Седовым и Наталией Владимировной Беляускене</h1>
+                    <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Ретрит тур на Андаманские острова в компании мастеров</h1>
                     <div className="flex flex-wrap gap-3 text-sm font-semibold uppercase tracking-wide text-white/90">
                         <span className="rounded-full bg-white/15 px-4 py-2 backdrop-blur">13 - 26 марта 2026</span>
                         <span className="rounded-full bg-white/15 px-4 py-2 backdrop-blur">12 дней островной перезагрузки</span>

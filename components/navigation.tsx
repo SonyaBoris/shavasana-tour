@@ -23,8 +23,9 @@ export default function Navigation() {
     return (
         <div className="fixed left-0 top-0 z-30 flex w-full justify-center px-4 py-4 sm:px-6 sm:py-5 font-sans bg-gradient-to-b from-[#060b11] via-[#0f1f2b]/80 to-transparent text-white backdrop-blur-md shadow-lg shadow-black/30">
             <div className="site-container flex items-center justify-between">
-                <div className="text-sm font-semibold tracking-wide uppercase text-white/80">Shavasana Tour</div>
-
+                <Link href="/">
+                    <div className="text-sm font-semibold tracking-wide uppercase text-white/80">Shavasana Tour</div>
+                </Link>
                 <button
                     type="button"
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white shadow-md backdrop-blur transition hover:border-white/40 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/60 md:hidden"
