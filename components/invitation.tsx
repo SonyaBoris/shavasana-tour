@@ -1,9 +1,15 @@
+import Image from "next/image";
 import Link from "next/link";
+import organizersImage from "@/public/organizators.jpg";
+import bgImage from "@/public/fon2.jpg";
 
 const Invitation = () => {
     return (
-        <section className="bg-[#0d1d22] text-white">
-            <div className="site-container py-16 space-y-10">
+        <section className="relative min-h-[80vh] bg-cover bg-fixed bg-center bg-no-repeat text-white"
+            style={{ backgroundImage: `url(${bgImage.src})` }}>
+            <div className="absolute inset-0 bg-gradient-to-b  bg-[#05090f]/60 pointer-events-none" />
+
+            <div className="relative z-10 site-container py-16 space-y-10">
                 <header className="space-y-3 max-w-4xl">
                     <p className="text-sm uppercase tracking-[0.08em] text-white/60">Приглашение от организаторов</p>
                     <h2 className="text-3xl font-semibold leading-tight md:text-4xl">Путешествие, которое меняет ощущение отдыха</h2>
@@ -12,13 +18,16 @@ const Invitation = () => {
 
                 <div className="space-y-8">
                     <div className="rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur shadow-xl text-white/90 leading-relaxed overflow-hidden">
-                        <div className="flex flex-col gap-5 md:flex-row md:items-start">
-                            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-lg md:w-[38%] lg:w-[34%]">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    src="/organizators.jpg"
+                        <div className="flex flex-col gap-5 md:flex-row md:items-stretch">
+                            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-lg md:w-[38%] lg:w-[34%] min-h-[260px] md:min-h-full">
+                                <Image
+                                    src={organizersImage}
                                     alt="Организаторы ретрита"
-                                    className="h-full w-full object-cover"
+                                    fill
+                                    placeholder="blur"
+                                    sizes="(min-width: 1024px) 34vw, (min-width: 768px) 38vw, 100vw"
+                                    loading="lazy"
+                                    className="object-cover"
                                 />
                             </div>
                             <div className="space-y-4 md:w-[62%] lg:w-[66%]">
@@ -34,7 +43,7 @@ const Invitation = () => {
                         </div>
                     </div>
 
-                    <div className="grid gap-6 lg:grid-cols-3">
+                    <div className="grid gap-4 sm:gap-6 lg:grid-cols-3">
                         <div className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#123240]/80 via-[#0f1f2b]/90 to-[#0a121a] p-6 md:p-7 shadow-xl space-y-4">
                             <h3 className="text-xl font-semibold">Кому это откликается</h3>
                             <p className="text-base leading-relaxed text-white/90">Если устал бежать и контролировать всё подряд, хочешь по-новому прожить отдых и просто быть в потоке - это путешествие для тебя.</p>

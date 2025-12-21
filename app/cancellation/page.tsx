@@ -1,11 +1,12 @@
-import Navigation from "@/components/navigation";
 import Link from "next/link";
+import bgImage from "@/public/fon2.jpg";
 
 export default function CancellationPage() {
   return (
-    <main className="bg-[#0d1d22] text-white min-h-screen">
-      <Navigation />
-      <section className="site-container pt-32 pb-16 space-y-8">
+    <main className="relative min-h-[80vh] bg-cover bg-center bg-no-repeat text-white"
+      style={{ backgroundImage: `url(${bgImage.src})` }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#05090f]/85 via-[#0a1f26]/70 to-[#0d1d22] pointer-events-none" />
+      <section className="relative z-10 site-container pt-32 pb-16 space-y-8">
         <header className="space-y-3 max-w-4xl">
           <p className="text-sm uppercase tracking-[0.08em] text-white/60">
             Условия отмены

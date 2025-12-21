@@ -1,11 +1,13 @@
-import Navigation from "@/components/navigation";
 import Link from "next/link";
+import bgImage from "@/public/fon4.jpg";
 
 export default function ParticipationPage() {
   return (
-    <main className="bg-[#0d1d22] text-white min-h-screen">
-      <Navigation />
-      <section className="site-container pt-32 pb-16 space-y-8">
+    <main className="relative min-h-[80vh] bg-cover bg-fixed bg-center bg-no-repeat text-white"
+      style={{ backgroundImage: `url(${bgImage.src})` }}>
+
+      <div className="absolute inset-0 bg-[#05090f]/60 pointer-events-none" />
+      <section className="relative z-10 site-container pt-32 pb-16 space-y-8">
         <header className="space-y-3 max-w-4xl">
           <p className="text-sm uppercase tracking-[0.08em] text-white/60">
             Варианты участия
@@ -13,8 +15,8 @@ export default function ParticipationPage() {
           <h1 className="text-4xl font-semibold leading-tight">Тарифы</h1>
         </header>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-7 backdrop-blur shadow-xl space-y-3">
             <h3 className="text-xl font-semibold">Оптимальный</h3>
             <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
               <li>Размещение в двухместном номере по 2 человека.</li>
@@ -28,7 +30,7 @@ export default function ParticipationPage() {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/8 p-6 backdrop-blur shadow-xl space-y-3">
+          <div className="rounded-3xl border border-white/10 bg-white/8 p-6 sm:p-7 backdrop-blur shadow-xl space-y-3">
             <h3 className="text-xl font-semibold">Комфорт</h3>
             <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
               <li>Размещение одноместное</li>
@@ -42,7 +44,7 @@ export default function ParticipationPage() {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-7 backdrop-blur shadow-xl space-y-3">
             <h3 className="text-xl font-semibold">Вип тариф</h3>
             <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
               <li>Вам не придется искать билеты и оформлять визу!</li>
@@ -55,7 +57,7 @@ export default function ParticipationPage() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-3">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-7 backdrop-blur shadow-xl space-y-3">
           <h3 className="text-xl font-semibold">Мега предложение</h3>
           <p className="text-white/90 leading-relaxed">
             При внесении предоплаты

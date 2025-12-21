@@ -1,12 +1,18 @@
-import Navigation from "@/components/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import bgImage from "@/public/fon.jpg";
+import juliaImage from "@/public/julia.jpg";
+import mikhailImage from "@/public/mikhail.jpg";
+import mariImage from "@/public/mari.jpg";
+import nataliImage from "@/public/natali.jpg";
 
 export default function MastersPage() {
   return (
-    <main className="bg-[#0d1d22] text-white min-h-screen">
-      <Navigation />
-      <section className="site-container pt-32 pb-16 space-y-8">
+    <main className="relative min-h-[80vh] bg-cover bg-fixed bg-center bg-no-repeat text-white"
+      style={{ backgroundImage: `url(${bgImage.src})` }}>
+
+      <div className="absolute inset-0 bg-gradient-to-b  bg-[#05090f]/70 pointer-events-none" />
+      <section className="relative z-10 site-container pt-32 pb-16 space-y-8">
         <header className="space-y-3 max-w-4xl">
           <p className="text-sm uppercase tracking-[0.08em] text-white/60">
             Мастера
@@ -19,19 +25,21 @@ export default function MastersPage() {
             создают пространство безопасности и осознанности.
           </p>
         </header>
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-5">
-            <div className="flex items-center gap-4">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur shadow-xl space-y-5">
+            <div className="flex items-start gap-3 sm:gap-4">
               <Image
-                src="/julia.jpg"
+                src={juliaImage}
                 alt="Юлия Борисова"
                 width={64}
                 height={64}
-                className="h-16 w-16 rounded-full object-cover ring-2 ring-white/20"
+                loading="lazy"
+                placeholder="blur"
+                className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-full object-cover ring-2 ring-white/20"
               />
-              <div>
-                <h3 className="text-2xl font-semibold">Юлия Борисова</h3>
-                <p className="text-sm text-white/70">Руководитель и вдохновитель ретрит-центра «Шавасана»</p>
+              <div className="min-w-0">
+                <h3 className="text-xl sm:text-2xl font-semibold">Юлия Борисова</h3>
+                <p className="text-sm text-white/70 leading-snug">Руководитель и вдохновитель ретрит-центра «Шавасана»</p>
               </div>
             </div>
             <div className="space-y-3 text-white/90 leading-relaxed">
@@ -107,19 +115,20 @@ export default function MastersPage() {
               </div>
             </div>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-5">
-            <div className="flex items-center gap-4">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur shadow-xl space-y-5">
+            <div className="flex items-start gap-3 sm:gap-4">
               <Image
-                src="/mikhail.jpg"
+                src={mikhailImage}
                 alt="Михаил Седов"
                 width={64}
                 height={64}
-                className="h-16 w-16 rounded-full object-cover ring-2 ring-white/20"
-                priority
+                loading="lazy"
+                placeholder="blur"
+                className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-full object-cover ring-2 ring-white/20"
               />
-              <div>
-                <h3 className="text-2xl font-semibold">Михаил Седов</h3>
-                <p className="text-sm text-white/70">Кармолог, парапсихолог, видящий</p>
+              <div className="min-w-0">
+                <h3 className="text-xl sm:text-2xl font-semibold">Михаил Седов</h3>
+                <p className="text-sm text-white/70 leading-snug">Кармолог, парапсихолог, видящий</p>
               </div>
             </div>
             <div className="space-y-3 text-white/90 leading-relaxed">
@@ -170,18 +179,20 @@ export default function MastersPage() {
               </p>
             </div>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-5">
-            <div className="flex items-center gap-4">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur shadow-xl space-y-5">
+            <div className="flex items-start gap-3 sm:gap-4">
               <Image
-                src="/mari.jpg"
+                src={mariImage}
                 alt="Мария Серебрякова"
                 width={64}
                 height={64}
-                className="h-16 w-16 rounded-full object-cover ring-2 ring-white/20"
+                loading="lazy"
+                placeholder="blur"
+                className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-full object-cover ring-2 ring-white/20"
               />
-              <div>
-                <h3 className="text-2xl font-semibold">Мария Серебрякова</h3>
-                <p className="text-sm text-white/70">Психолог, проводник Лилы, расстановщик</p>
+              <div className="min-w-0">
+                <h3 className="text-xl sm:text-2xl font-semibold">Мария Серебрякова</h3>
+                <p className="text-sm text-white/70 leading-snug">Психолог, проводник Лилы, расстановщик</p>
               </div>
             </div>
             <div className="space-y-3 text-white/90 leading-relaxed">
@@ -212,18 +223,20 @@ export default function MastersPage() {
               </a>
             </div>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-xl space-y-5">
-            <div className="flex items-center gap-4">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 backdrop-blur shadow-xl space-y-5">
+            <div className="flex items-start gap-3 sm:gap-4">
               <Image
-                src="/natali.jpg"
+                src={nataliImage}
                 alt="Наталия Владимировна Беляускене"
                 width={64}
                 height={64}
-                className="h-16 w-16 rounded-full object-cover ring-2 ring-white/20"
+                loading="lazy"
+                placeholder="blur"
+                className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-full object-cover ring-2 ring-white/20"
               />
-              <div>
-                <h3 className="text-2xl font-semibold">Наталия Беляускене</h3>
-                <p className="text-sm text-white/70">Популярный блогер, канал «Этот момент»</p>
+              <div className="min-w-0">
+                <h3 className="text-xl sm:text-2xl font-semibold">Наталия Беляускене</h3>
+                <p className="text-sm text-white/70 leading-snug">Популярный блогер, канал «Этот момент»</p>
               </div>
             </div>
             <a

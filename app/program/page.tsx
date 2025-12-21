@@ -1,7 +1,8 @@
 "use client";
 
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import Navigation from "@/components/navigation";
+import bgImage from "@/public/fon2.jpg";
 import day11 from "@/public/day1-1.jpg";
 import day12 from "@/public/day1-2.jpg";
 import day151 from "@/public/15-1.jpg";
@@ -31,7 +32,7 @@ import day252 from "@/public/25-2.jpg";
 type Day = {
   id: string;
   title: string;
-  gallery: string[];
+  gallery: StaticImageData[];
   items: string[];
 };
 
@@ -39,7 +40,7 @@ const days: Day[] = [
   {
     id: "day-14",
     title: "14 марта",
-    gallery: [day11.src, day12.src],
+    gallery: [day11, day12],
     items: [
       "Мы прилетаем на остров Порт Блэр",
       "Размещаемся в отеле и встречаемся в холле для знакомства",
@@ -50,7 +51,7 @@ const days: Day[] = [
   {
     id: "day-15",
     title: "15 марта",
-    gallery: [day151.src, day152.src],
+    gallery: [day151, day152],
     items: [
       "Утром перемещаемся на пароме на остров Хэвлок и размещаемся в отеле",
       "Silver Sand Beach resort 5*",
@@ -65,7 +66,7 @@ const days: Day[] = [
   {
     id: "day-16",
     title: "16 марта",
-    gallery: [day21.src, day22.src],
+    gallery: [day21, day22],
     items: [
       "Утро начинается на восходе солнца с йоги на берегу океана, переходит в медитацию, потом купание в кристальных водах океана",
       "Нас ждет прекрасный завтрак в отеле",
@@ -78,7 +79,7 @@ const days: Day[] = [
   {
     id: "day-17",
     title: "17 марта",
-    gallery: [day31.src, day32.src],
+    gallery: [day31, day32],
     items: [
       "Утро начинается в 3.00 ч",
       "Мы отправляемся на каякинг— это занятие, во время которого туристы исследуют спокойные воды под звёздным небом, наблюдая явление биолюминесценции. Крошечный морской организм излучает естественное свечение, освещая воду сине-зелёными искрами при гребле",
@@ -91,7 +92,7 @@ const days: Day[] = [
   {
     id: "day-18",
     title: "18 марта",
-    gallery: [day181.src, day182.src],
+    gallery: [day181, day182],
     items: [
       "Мы встречаем восход солнца зарядкой на берегу и крийя йогой",
       "Завтракаем и отправляемся исследовать новый пляж Калапатар",
@@ -103,7 +104,7 @@ const days: Day[] = [
   {
     id: "day-19",
     title: "19 марта",
-    gallery: [day191.src, day192.src],
+    gallery: [day191, day192],
     items: [
       "Мы на пароме перемещаемся на остров Нил",
       "Нил (Neil) – небольшой обитаемый остров рядом с более шумным Хэвлоком: свежие фрукты, разнообразные пляжи и теплое лазурное море с коралловыми рифами",
@@ -114,7 +115,7 @@ const days: Day[] = [
   {
     id: "day-20",
     title: "20 марта",
-    gallery: [day201.src, day202.src],
+    gallery: [day201, day202],
     items: [
       "Жители Андаманских островов прозвали Нил «продуктовой чашей»",
       "Отсюда поставляется львиная доля фруктов, овощей и риса для всего архипелага; вокруг рисовые поля и плантации бананов, манго и других тропических фруктов",
@@ -128,7 +129,7 @@ const days: Day[] = [
   {
     id: "day-21",
     title: "21 марта",
-    gallery: [day211.src, day212.src],
+    gallery: [day211, day212],
     items: [
       "День весеннего равноденствия",
       "Встречаем восход йогой на пляже",
@@ -141,7 +142,7 @@ const days: Day[] = [
   {
     id: "day-22",
     title: "22 марта",
-    gallery: [day221.src, day222.src],
+    gallery: [day221, day222],
     items: [
       "Перемещаемся на пароме на остров Хэвлок на завораживающий пляж Радха Нагар в отель Barefoot resort 5*",
       "Это аутентичный отель среди вековых деревьев с потрясающими эко-бунгало и крышей из пальмовых листьев",
@@ -152,7 +153,7 @@ const days: Day[] = [
   {
     id: "day-23",
     title: "23 марта",
-    gallery: [day231.src, day232.src],
+    gallery: [day231, day232],
     items: [
       "После зарядки и завтрака отправляемся в трекинг через джунгли на пляж Элефант Бич",
       "По дороге увидим настоящие джунгли и ближе к берегу последствия цунами 2004 года",
@@ -163,7 +164,7 @@ const days: Day[] = [
   {
     id: "day-24",
     title: "24 марта",
-    gallery: [day241.src, day242.src],
+    gallery: [day241, day242],
     items: [
       "День наслаждения",
       "Йога на восходе солнца",
@@ -176,7 +177,7 @@ const days: Day[] = [
   {
     id: "day-25",
     title: "25 марта",
-    gallery: [day251.src, day252.src],
+    gallery: [day251, day252],
     items: [
       "День прощания с островом",
       "Утром прогулка по берегу",
@@ -196,10 +197,12 @@ export default function ProgramPage() {
   };
 
   return (
-    <main className="bg-[#0d1d22] text-white min-h-screen">
-      <Navigation />
-      <section className="pt-32 pb-16 space-y-12">
-        <aside className="hidden lg:flex flex-col gap-2 fixed right-6 top-32 z-20">
+    <main className="relative min-h-[80vh] bg-cover bg-fixed bg-center bg-no-repeat text-white"
+      style={{ backgroundImage: `url(${bgImage.src})` }}>
+      <div className="absolute inset-0 bg-[#05090f]/60 pointer-events-none" />
+
+      <section className="relative z-10 pt-32 pb-16 space-y-12">
+        <aside className="hidden lg:flex flex-col gap-2 fixed right-6 top-28 z-20">
           <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur px-4 py-3 shadow-lg">
             <p className="text-xs uppercase tracking-[0.08em] text-white/70 mb-2">
               Дни
@@ -235,12 +238,12 @@ export default function ProgramPage() {
             <div
               key={day.title}
               id={day.id}
-              className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-8 shadow-xl space-y-4 scroll-mt-24"
+              className="space-y-4 scroll-mt-24"
             >
               <div className="grid gap-4 lg:grid-cols-[2fr_1fr] items-stretch">
-                <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur p-6 md:p-8 space-y-4 shadow-lg h-full flex flex-col">
+                <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur p-2 md:p-8 space-y-4 shadow-lg h-full flex flex-col">
                   <div className="flex items-center gap-3">
-                    <span className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-white">
+                    <span className="rounded-full border border-white/30 bg-white/10 px-2 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-white">
                       {day.title}
                     </span>
                   </div>
@@ -255,18 +258,18 @@ export default function ProgramPage() {
                   {day.gallery?.slice(0, 2).map((image, index) => (
                     <div
                       key={`${day.title}-img-${index}`}
-                      className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur overflow-hidden shadow-lg min-h-[220px] flex-1 flex"
+                      className="relative rounded-2xl border border-white/15 bg-white/10 backdrop-blur overflow-hidden shadow-lg min-h-[180px] md:min-h-[220px] flex-1"
                     >
-                      <div
-                        className="relative w-full"
-                        style={{
-                          backgroundImage: `url(${image})`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                        }}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1d22]/60 via-transparent to-[#0d1d22]/60" />
-                      </div>
+                      <Image
+                        src={image}
+                        alt={`Фото ${day.title}`}
+                        fill
+                        placeholder="blur"
+                        sizes="(min-width: 1024px) 32vw, 100vw"
+                        loading="lazy"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#0d1d22]/60 via-transparent to-[#0d1d22]/60 pointer-events-none" />
                     </div>
                   ))}
                 </div>
