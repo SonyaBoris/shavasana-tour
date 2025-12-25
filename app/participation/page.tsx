@@ -6,7 +6,7 @@ export default function ParticipationPage() {
     <main className="relative min-h-[80vh] bg-cover bg-fixed bg-center bg-no-repeat text-white"
       style={{ backgroundImage: `url(${bgImage.src})` }}>
 
-      <div className="absolute inset-0 bg-[#05090f]/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#05090f]/85 via-[#0a1f26]/70 to-[#0d1d22] pointer-events-none" />
       <section className="relative z-10 site-container pt-32 pb-16 space-y-8">
         <header className="space-y-3 max-w-4xl">
           <p className="text-sm uppercase tracking-[0.08em] text-white/60">
@@ -56,20 +56,6 @@ export default function ParticipationPage() {
             </ul>
           </div>
         </div>
-
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-7 backdrop-blur shadow-xl space-y-3">
-          <h3 className="text-xl font-semibold">Мега предложение</h3>
-          <p className="text-white/90 leading-relaxed">
-            При внесении предоплаты
-            20-23 декабря, самая вкусная цена:
-          </p>
-          <ul className="space-y-3 text-base leading-relaxed text-white/90 list-disc marker:text-white/70 pl-5">
-            <li>Оптимальный- 2600$</li>
-            <li>Комфорт-4400$</li>
-            <li>Вип-5500$</li>
-          </ul>
-        </div>
-
         <Link
           href="/"
           className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-white/40 hover:bg-white/20"
